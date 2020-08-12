@@ -17,6 +17,8 @@
 		DAA264EB24E43F2A001D4875 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAA264BF24E43F2A001D4875 /* Assets.xcassets */; };
 		DAA264FC24E447C0001D4875 /* Today.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA264FB24E447C0001D4875 /* Today.swift */; };
 		DAA264FD24E447C0001D4875 /* Today.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA264FB24E447C0001D4875 /* Today.swift */; };
+		DAA264FF24E44C8E001D4875 /* TodayHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA264FE24E44C8E001D4875 /* TodayHeader.swift */; };
+		DAA2650024E44C8E001D4875 /* TodayHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA264FE24E44C8E001D4875 /* TodayHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,7 @@
 		DAA264E324E43F2A001D4875 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		DAA264E524E43F2A001D4875 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAA264FB24E447C0001D4875 /* Today.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Today.swift; sourceTree = "<group>"; };
+		DAA264FE24E44C8E001D4875 /* TodayHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				DAA264FB24E447C0001D4875 /* Today.swift */,
+				DAA264FE24E44C8E001D4875 /* TodayHeader.swift */,
 			);
 			path = Today;
 			sourceTree = "<group>";
@@ -322,6 +326,7 @@
 			files = (
 				DAA264E824E43F2A001D4875 /* ContentView.swift in Sources */,
 				DAA264FC24E447C0001D4875 /* Today.swift in Sources */,
+				DAA264FF24E44C8E001D4875 /* TodayHeader.swift in Sources */,
 				DAA264E624E43F2A001D4875 /* appstore_swiftApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,6 +337,7 @@
 			files = (
 				DAA264E924E43F2A001D4875 /* ContentView.swift in Sources */,
 				DAA264FD24E447C0001D4875 /* Today.swift in Sources */,
+				DAA2650024E44C8E001D4875 /* TodayHeader.swift in Sources */,
 				DAA264E724E43F2A001D4875 /* appstore_swiftApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

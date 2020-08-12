@@ -10,6 +10,10 @@ import SwiftUI
 struct Today: View {
   var body: some View {
     ScrollView(.vertical) {
+      HStack {
+        TodayHeader()
+        Spacer()
+      }
       Text("Header")
       Divider()
       Text("Today Section")
