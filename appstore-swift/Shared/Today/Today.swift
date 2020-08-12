@@ -16,10 +16,13 @@ struct Today: View {
       }
       TodayHeader(trailingContent: Text("Header"))
       Divider()
-      Text("Today Section")
+      TodayGrid()
+
       Divider()
-      MoreStoriesForYouHeader()
-      Text("More Stories For You Section")
+        MoreStoriesForYouHeader()
+      ForEach(0 ..< 3) { _ in
+        TodayGrid()
+      }
       Text("Buttons Section")
       Divider()
       Text("Terms & Conditions >")
