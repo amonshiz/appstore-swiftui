@@ -15,6 +15,8 @@
 		DAA264E924E43F2A001D4875 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA264BE24E43F29001D4875 /* ContentView.swift */; };
 		DAA264EA24E43F2A001D4875 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAA264BF24E43F2A001D4875 /* Assets.xcassets */; };
 		DAA264EB24E43F2A001D4875 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAA264BF24E43F2A001D4875 /* Assets.xcassets */; };
+		DAA264FC24E447C0001D4875 /* Today.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA264FB24E447C0001D4875 /* Today.swift */; };
+		DAA264FD24E447C0001D4875 /* Today.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA264FB24E447C0001D4875 /* Today.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,7 @@
 		DAA264DF24E43F2A001D4875 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAA264E324E43F2A001D4875 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		DAA264E524E43F2A001D4875 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAA264FB24E447C0001D4875 /* Today.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Today.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +101,7 @@
 		DAA264BC24E43F29001D4875 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				DAA264FA24E447B2001D4875 /* Today */,
 				DAA264BD24E43F29001D4875 /* appstore_swiftApp.swift */,
 				DAA264BE24E43F29001D4875 /* ContentView.swift */,
 				DAA264BF24E43F2A001D4875 /* Assets.xcassets */,
@@ -149,6 +153,14 @@
 				DAA264E524E43F2A001D4875 /* Info.plist */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		DAA264FA24E447B2001D4875 /* Today */ = {
+			isa = PBXGroup;
+			children = (
+				DAA264FB24E447C0001D4875 /* Today.swift */,
+			);
+			path = Today;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAA264E824E43F2A001D4875 /* ContentView.swift in Sources */,
+				DAA264FC24E447C0001D4875 /* Today.swift in Sources */,
 				DAA264E624E43F2A001D4875 /* appstore_swiftApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAA264E924E43F2A001D4875 /* ContentView.swift in Sources */,
+				DAA264FD24E447C0001D4875 /* Today.swift in Sources */,
 				DAA264E724E43F2A001D4875 /* appstore_swiftApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
