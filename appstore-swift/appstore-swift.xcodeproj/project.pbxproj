@@ -21,6 +21,10 @@
 		DAA2650024E44C8E001D4875 /* TodayHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA264FE24E44C8E001D4875 /* TodayHeader.swift */; };
 		DAA2650224E44E62001D4875 /* TodayDateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA2650124E44E62001D4875 /* TodayDateHeader.swift */; };
 		DAA2650324E44E62001D4875 /* TodayDateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA2650124E44E62001D4875 /* TodayDateHeader.swift */; };
+		DAA2650824E44FC1001D4875 /* MainTabHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA2650724E44FC1001D4875 /* MainTabHeader.swift */; };
+		DAA2650924E44FC1001D4875 /* MainTabHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA2650724E44FC1001D4875 /* MainTabHeader.swift */; };
+		DAA2650B24E45071001D4875 /* MoreStoriesForYouHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA2650A24E45071001D4875 /* MoreStoriesForYouHeader.swift */; };
+		DAA2650C24E45071001D4875 /* MoreStoriesForYouHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA2650A24E45071001D4875 /* MoreStoriesForYouHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,8 @@
 		DAA264FB24E447C0001D4875 /* Today.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Today.swift; sourceTree = "<group>"; };
 		DAA264FE24E44C8E001D4875 /* TodayHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayHeader.swift; sourceTree = "<group>"; };
 		DAA2650124E44E62001D4875 /* TodayDateHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayDateHeader.swift; sourceTree = "<group>"; };
+		DAA2650724E44FC1001D4875 /* MainTabHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainTabHeader.swift; path = ../../../../../../MainTabHeader.swift; sourceTree = "<group>"; };
+		DAA2650A24E45071001D4875 /* MoreStoriesForYouHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreStoriesForYouHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +113,7 @@
 		DAA264BC24E43F29001D4875 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				DAA2650424E44FAE001D4875 /* Views */,
 				DAA264FA24E447B2001D4875 /* Today */,
 				DAA264BD24E43F29001D4875 /* appstore_swiftApp.swift */,
 				DAA264BE24E43F29001D4875 /* ContentView.swift */,
@@ -167,8 +174,25 @@
 				DAA264FB24E447C0001D4875 /* Today.swift */,
 				DAA264FE24E44C8E001D4875 /* TodayHeader.swift */,
 				DAA2650124E44E62001D4875 /* TodayDateHeader.swift */,
+				DAA2650A24E45071001D4875 /* MoreStoriesForYouHeader.swift */,
 			);
 			path = Today;
+			sourceTree = "<group>";
+		};
+		DAA2650424E44FAE001D4875 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DAA2650624E44FB3001D4875 /* Headers */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DAA2650624E44FB3001D4875 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				DAA2650724E44FC1001D4875 /* MainTabHeader.swift */,
+			);
+			path = Headers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,9 +353,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAA2650224E44E62001D4875 /* TodayDateHeader.swift in Sources */,
+				DAA2650824E44FC1001D4875 /* MainTabHeader.swift in Sources */,
 				DAA264E824E43F2A001D4875 /* ContentView.swift in Sources */,
 				DAA264FC24E447C0001D4875 /* Today.swift in Sources */,
 				DAA264FF24E44C8E001D4875 /* TodayHeader.swift in Sources */,
+				DAA2650B24E45071001D4875 /* MoreStoriesForYouHeader.swift in Sources */,
 				DAA264E624E43F2A001D4875 /* appstore_swiftApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,9 +367,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAA2650324E44E62001D4875 /* TodayDateHeader.swift in Sources */,
+				DAA2650924E44FC1001D4875 /* MainTabHeader.swift in Sources */,
 				DAA264E924E43F2A001D4875 /* ContentView.swift in Sources */,
 				DAA264FD24E447C0001D4875 /* Today.swift in Sources */,
 				DAA2650024E44C8E001D4875 /* TodayHeader.swift in Sources */,
+				DAA2650C24E45071001D4875 /* MoreStoriesForYouHeader.swift in Sources */,
 				DAA264E724E43F2A001D4875 /* appstore_swiftApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
