@@ -11,7 +11,7 @@ struct Today: View {
   var body: some View {
     ScrollView(.vertical) {
       HStack {
-        TodayHeader()
+        TodayDateHeader()
         Spacer()
       }
       Text("Header")

@@ -19,6 +19,8 @@
 		DAA264FD24E447C0001D4875 /* Today.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA264FB24E447C0001D4875 /* Today.swift */; };
 		DAA264FF24E44C8E001D4875 /* TodayHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA264FE24E44C8E001D4875 /* TodayHeader.swift */; };
 		DAA2650024E44C8E001D4875 /* TodayHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA264FE24E44C8E001D4875 /* TodayHeader.swift */; };
+		DAA2650224E44E62001D4875 /* TodayDateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA2650124E44E62001D4875 /* TodayDateHeader.swift */; };
+		DAA2650324E44E62001D4875 /* TodayDateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA2650124E44E62001D4875 /* TodayDateHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,7 @@
 		DAA264E524E43F2A001D4875 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAA264FB24E447C0001D4875 /* Today.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Today.swift; sourceTree = "<group>"; };
 		DAA264FE24E44C8E001D4875 /* TodayHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayHeader.swift; sourceTree = "<group>"; };
+		DAA2650124E44E62001D4875 /* TodayDateHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayDateHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +166,7 @@
 			children = (
 				DAA264FB24E447C0001D4875 /* Today.swift */,
 				DAA264FE24E44C8E001D4875 /* TodayHeader.swift */,
+				DAA2650124E44E62001D4875 /* TodayDateHeader.swift */,
 			);
 			path = Today;
 			sourceTree = "<group>";
@@ -324,6 +328,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAA2650224E44E62001D4875 /* TodayDateHeader.swift in Sources */,
 				DAA264E824E43F2A001D4875 /* ContentView.swift in Sources */,
 				DAA264FC24E447C0001D4875 /* Today.swift in Sources */,
 				DAA264FF24E44C8E001D4875 /* TodayHeader.swift in Sources */,
@@ -335,6 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAA2650324E44E62001D4875 /* TodayDateHeader.swift in Sources */,
 				DAA264E924E43F2A001D4875 /* ContentView.swift in Sources */,
 				DAA264FD24E447C0001D4875 /* Today.swift in Sources */,
 				DAA2650024E44C8E001D4875 /* TodayHeader.swift in Sources */,
