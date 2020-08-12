@@ -14,9 +14,11 @@ struct Today: View {
         TodayDateHeader()
         Spacer()
       }
-      Text("Header")
+      TodayHeader(trailingContent: Text("Header"))
       Divider()
       Text("Today Section")
+      Divider()
+      TodayHeader(trailingContent: EmptyView())
       Text("More Stories For You Section")
       Text("Buttons Section")
       Divider()

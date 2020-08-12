@@ -7,23 +7,25 @@
 
 import SwiftUI
 
-struct TodayHeader: View {
-  let formatter: DateFormatter = {
-    let f = DateFormatter()
-    f.locale = Locale.autoupdatingCurrent
-    f.setLocalizedDateFormatFromTemplate("EEEE, MMMM dd")
-    return f
-  }()
-  
+struct TodayHeader<Content: View>: View {
+  let trailingContent: Content
+
   var body: some View {
-    Text(formatter.string(from: Date()))
-      .font(Font.body.smallCaps())
-      .foregroundColor(.gray)
+    HStack {
+      Text("Today")
+        .font(.title)
+        .fontWeight(.bold)
+
+      Spacer()
+
+      trailingContent
+    }
   }
 }
 
 struct TodayHeader_Previews: PreviewProvider {
   static var previews: some View {
-    TodayHeader()
+    TodayHeader(trailingContent: Text("Trailing"))
+      .previewLayout()
   }
 }
