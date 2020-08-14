@@ -16,17 +16,19 @@ struct Today: View {
       }
       TodayHeader(trailingContent: Text("Header"))
       Divider()
-      TodayGrid()
+      TodayGrid(within: 768, contents: Array(repeating: "Today", count: 6))
 
       Divider()
-        MoreStoriesForYouHeader()
+      MoreStoriesForYouHeader()
       ForEach(0 ..< 3) { _ in
-        TodayGrid()
+        TodayGrid(within: 768, contents: Array(repeating: "Placeholder", count: 6))
       }
+      .padding()
       Text("Buttons Section")
       Divider()
       Text("Terms & Conditions >")
     }
+    .padding()
   }
 }
 
