@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DA35019524EE060700F8C436 /* MainTabHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA35019424EE060700F8C436 /* MainTabHeader.swift */; };
+		DA35019724EE065F00F8C436 /* FooterButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA35019624EE065F00F8C436 /* FooterButtons.swift */; };
 		DAA264D924E43F2A001D4875 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA264D824E43F2A001D4875 /* Tests_iOS.swift */; };
 		DAA264E424E43F2A001D4875 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA264E324E43F2A001D4875 /* Tests_macOS.swift */; };
 		DAA264E624E43F2A001D4875 /* appstore_swiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA264BD24E43F29001D4875 /* appstore_swiftApp.swift */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		DA35019424EE060700F8C436 /* MainTabHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabHeader.swift; sourceTree = "<group>"; };
+		DA35019624EE065F00F8C436 /* FooterButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterButtons.swift; sourceTree = "<group>"; };
 		DAA264BD24E43F29001D4875 /* appstore_swiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appstore_swiftApp.swift; sourceTree = "<group>"; };
 		DAA264BE24E43F29001D4875 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DAA264BF24E43F2A001D4875 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				DAA2650124E44E62001D4875 /* TodayDateHeader.swift */,
 				DAA2650A24E45071001D4875 /* MoreStoriesForYouHeader.swift */,
 				DAA2650D24E4512F001D4875 /* TodayGrid.swift */,
+				DA35019624EE065F00F8C436 /* FooterButtons.swift */,
 			);
 			path = Today;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				DAA264FC24E447C0001D4875 /* Today.swift in Sources */,
 				DAA264FF24E44C8E001D4875 /* TodayHeader.swift in Sources */,
 				DAA2650B24E45071001D4875 /* MoreStoriesForYouHeader.swift in Sources */,
+				DA35019724EE065F00F8C436 /* FooterButtons.swift in Sources */,
 				DAA264E624E43F2A001D4875 /* appstore_swiftApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

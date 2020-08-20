@@ -24,7 +24,7 @@ struct Today: View {
         ForEach(0 ..< 3) { _ in
           TodayGrid(within: geo.size.width, contents: Array(repeating: "Placeholder", count: 6))
         }
-        Text("Buttons Section")
+        FooterButtons()
         Divider()
         Text("Terms & Conditions >")
       }
