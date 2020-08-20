@@ -79,7 +79,27 @@ struct ScreenLayout {
   }
 }
 
-let contents = (0..<10).map(String.init(describing:))
+enum GridContent {
+  case hero
+  case list
+  case promo
+  case animated
+}
+
+extension GridContent {
+  func content() -> some View {
+    switch self {
+    case .hero:
+      return Text("hero")
+    case .list:
+      return Text("list")
+    case .promo:
+      return Text("Promo")
+    case .animated:
+      return Text("animated")
+    }
+  }
+}
 
 let layoutSpacing: CGFloat = 51 // constant
 let fixedHeight: CGFloat = 50
@@ -88,9 +108,9 @@ struct TodayGrid: View {
   let totalWidth: CGFloat
   let totalHeight: CGFloat
   let positionSize: [(CGSize, CGFloat)]
-  let contents: [String]
+  let contents: [GridContent]
 
-  init(within width: CGFloat, contents: [String]) {
+  init(within width: CGFloat, contents: [GridContent]) {
     self.contents = contents
 
     totalWidth = width
@@ -124,7 +144,7 @@ struct TodayGrid: View {
       .overlay(
         ZStack(alignment: .topLeading) {
           ForEach(Array(positionSize.enumerated()), id: \.0) { (index, element) in
-            Text("\(contents[index])")
+            contents[index].content()
               .frame(width: element.1, height: fixedHeight)
               .border(Color.red)
               .offset(element.0)
@@ -140,21 +160,21 @@ struct TodayGrid_Previews: PreviewProvider {
     GeometryReader { geo in
       VStack(alignment: .leading) {
         Group {
-          TodayGrid(within: geo.size.width, contents: Array(repeating: "Placeholder", count: 6))
+          TodayGrid(within: geo.size.width, contents: Array(repeating: .hero, count: 6))
         }
         .padding([.leading, .trailing], 5)
         .border(Color.red)
 
         Divider()
 
-        TodayGrid(within: geo.size.width, contents: Array(repeating: "Placeholder2", count: 6))
+        TodayGrid(within: geo.size.width, contents: Array(repeating: .list, count: 6))
           .border(Color.blue)
       }
     }
     .previewLayout(PreviewLayout.fixed(width: 1000, height: 768))
 
     GeometryReader { geo in
-      TodayGrid(within: geo.size.width, contents: Array(repeating: "Placeholder", count: 6))
+      TodayGrid(within: geo.size.width, contents: Array(repeating: .promo, count: 6))
     }
     .padding([.top])
     .previewLayout(PreviewLayout.fixed(width: 768, height: 1024))

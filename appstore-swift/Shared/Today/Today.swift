@@ -21,14 +21,14 @@ struct Today: View {
               .padding([.top, .bottom], 8)
             Divider()
           }
-          TodayGrid(within: geo.size.width, contents: Array(repeating: "Today", count: 6))
+          TodayGrid(within: geo.size.width, contents: Array(repeating: .hero, count: 6))
             .padding([.top, .bottom], 25)
 
           Divider()
           MoreStoriesForYouHeader()
             .padding([.top, .bottom], 15)
           ForEach(0 ..< 3) { _ in
-            TodayGrid(within: geo.size.width, contents: Array(repeating: "Placeholder", count: 6))
+            TodayGrid(within: geo.size.width, contents: Array(repeating: .list, count: 6))
           }
           .padding([.bottom], 51)
 
