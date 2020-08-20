@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA35019524EE060700F8C436 /* MainTabHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA35019424EE060700F8C436 /* MainTabHeader.swift */; };
 		DAA264D924E43F2A001D4875 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA264D824E43F2A001D4875 /* Tests_iOS.swift */; };
 		DAA264E424E43F2A001D4875 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA264E324E43F2A001D4875 /* Tests_macOS.swift */; };
 		DAA264E624E43F2A001D4875 /* appstore_swiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA264BD24E43F29001D4875 /* appstore_swiftApp.swift */; };
@@ -21,8 +22,6 @@
 		DAA2650024E44C8E001D4875 /* TodayHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA264FE24E44C8E001D4875 /* TodayHeader.swift */; };
 		DAA2650224E44E62001D4875 /* TodayDateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA2650124E44E62001D4875 /* TodayDateHeader.swift */; };
 		DAA2650324E44E62001D4875 /* TodayDateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA2650124E44E62001D4875 /* TodayDateHeader.swift */; };
-		DAA2650824E44FC1001D4875 /* MainTabHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA2650724E44FC1001D4875 /* MainTabHeader.swift */; };
-		DAA2650924E44FC1001D4875 /* MainTabHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA2650724E44FC1001D4875 /* MainTabHeader.swift */; };
 		DAA2650B24E45071001D4875 /* MoreStoriesForYouHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA2650A24E45071001D4875 /* MoreStoriesForYouHeader.swift */; };
 		DAA2650C24E45071001D4875 /* MoreStoriesForYouHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA2650A24E45071001D4875 /* MoreStoriesForYouHeader.swift */; };
 		DAA2650E24E4512F001D4875 /* TodayGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA2650D24E4512F001D4875 /* TodayGrid.swift */; };
@@ -47,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA35019424EE060700F8C436 /* MainTabHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabHeader.swift; sourceTree = "<group>"; };
 		DAA264BD24E43F29001D4875 /* appstore_swiftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appstore_swiftApp.swift; sourceTree = "<group>"; };
 		DAA264BE24E43F29001D4875 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DAA264BF24E43F2A001D4875 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,7 +64,6 @@
 		DAA264FB24E447C0001D4875 /* Today.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Today.swift; sourceTree = "<group>"; };
 		DAA264FE24E44C8E001D4875 /* TodayHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayHeader.swift; sourceTree = "<group>"; };
 		DAA2650124E44E62001D4875 /* TodayDateHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayDateHeader.swift; sourceTree = "<group>"; };
-		DAA2650724E44FC1001D4875 /* MainTabHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainTabHeader.swift; path = ../../../../../../MainTabHeader.swift; sourceTree = "<group>"; };
 		DAA2650A24E45071001D4875 /* MoreStoriesForYouHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreStoriesForYouHeader.swift; sourceTree = "<group>"; };
 		DAA2650D24E4512F001D4875 /* TodayGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayGrid.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +100,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA35019324EE060700F8C436 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				DA35019424EE060700F8C436 /* MainTabHeader.swift */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
 		DAA264B724E43F29001D4875 = {
 			isa = PBXGroup;
 			children = (
@@ -186,17 +193,9 @@
 		DAA2650424E44FAE001D4875 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DAA2650624E44FB3001D4875 /* Headers */,
+				DA35019324EE060700F8C436 /* Headers */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		DAA2650624E44FB3001D4875 /* Headers */ = {
-			isa = PBXGroup;
-			children = (
-				DAA2650724E44FC1001D4875 /* MainTabHeader.swift */,
-			);
-			path = Headers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,8 +357,8 @@
 			files = (
 				DAA2650224E44E62001D4875 /* TodayDateHeader.swift in Sources */,
 				DAA2650E24E4512F001D4875 /* TodayGrid.swift in Sources */,
-				DAA2650824E44FC1001D4875 /* MainTabHeader.swift in Sources */,
 				DAA264E824E43F2A001D4875 /* ContentView.swift in Sources */,
+				DA35019524EE060700F8C436 /* MainTabHeader.swift in Sources */,
 				DAA264FC24E447C0001D4875 /* Today.swift in Sources */,
 				DAA264FF24E44C8E001D4875 /* TodayHeader.swift in Sources */,
 				DAA2650B24E45071001D4875 /* MoreStoriesForYouHeader.swift in Sources */,
@@ -373,7 +372,6 @@
 			files = (
 				DAA2650324E44E62001D4875 /* TodayDateHeader.swift in Sources */,
 				DAA2650F24E4512F001D4875 /* TodayGrid.swift in Sources */,
-				DAA2650924E44FC1001D4875 /* MainTabHeader.swift in Sources */,
 				DAA264E924E43F2A001D4875 /* ContentView.swift in Sources */,
 				DAA264FD24E447C0001D4875 /* Today.swift in Sources */,
 				DAA2650024E44C8E001D4875 /* TodayHeader.swift in Sources */,
