@@ -11,22 +11,31 @@ struct Today: View {
   var body: some View {
     GeometryReader { geo in
       ScrollView(.vertical) {
-        HStack {
-          TodayDateHeader()
-          Spacer()
-        }
-        TodayHeader(trailingContent: Text("Header"))
-        Divider()
-        TodayGrid(within: geo.size.width, contents: Array(repeating: "Today", count: 6))
+        VStack(spacing: 0) {
+          VStack(spacing: 0) {
+            HStack {
+              TodayDateHeader()
+              Spacer()
+            }
+            TodayHeader(trailingContent: Text("Header"))
+              .padding([.top, .bottom], 8)
+            Divider()
+          }
+          TodayGrid(within: geo.size.width, contents: Array(repeating: "Today", count: 6))
+            .padding([.top, .bottom], 25)
 
-        Divider()
-        MoreStoriesForYouHeader()
-        ForEach(0 ..< 3) { _ in
-          TodayGrid(within: geo.size.width, contents: Array(repeating: "Placeholder", count: 6))
+          Divider()
+          MoreStoriesForYouHeader()
+            .padding([.top, .bottom], 15)
+          ForEach(0 ..< 3) { _ in
+            TodayGrid(within: geo.size.width, contents: Array(repeating: "Placeholder", count: 6))
+          }
+          .padding([.bottom], 51)
+
+          FooterButtons()
+          Divider()
+          Text("Terms & Conditions >")
         }
-        FooterButtons()
-        Divider()
-        Text("Terms & Conditions >")
       }
     }
     .padding([.top, .bottom])
