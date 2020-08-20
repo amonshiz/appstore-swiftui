@@ -9,26 +9,28 @@ import SwiftUI
 
 struct Today: View {
   var body: some View {
-    ScrollView(.vertical) {
-      HStack {
-        TodayDateHeader()
-        Spacer()
-      }
-      TodayHeader(trailingContent: Text("Header"))
-      Divider()
-      TodayGrid(within: 768, contents: Array(repeating: "Today", count: 6))
+    GeometryReader { geo in
+      ScrollView(.vertical) {
+        HStack {
+          TodayDateHeader()
+          Spacer()
+        }
+        TodayHeader(trailingContent: Text("Header"))
+        Divider()
+        TodayGrid(within: geo.size.width, contents: Array(repeating: "Today", count: 6))
 
-      Divider()
-      MoreStoriesForYouHeader()
-      ForEach(0 ..< 3) { _ in
-        TodayGrid(within: 768, contents: Array(repeating: "Placeholder", count: 6))
+        Divider()
+        MoreStoriesForYouHeader()
+        ForEach(0 ..< 3) { _ in
+          TodayGrid(within: geo.size.width, contents: Array(repeating: "Placeholder", count: 6))
+        }
+        Text("Buttons Section")
+        Divider()
+        Text("Terms & Conditions >")
       }
-      .padding()
-      Text("Buttons Section")
-      Divider()
-      Text("Terms & Conditions >")
     }
-    .padding()
+    .padding([.top, .bottom])
+    .padding([.leading, .trailing], 51)
   }
 }
 

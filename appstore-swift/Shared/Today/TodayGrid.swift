@@ -32,9 +32,9 @@ struct ScreenLayout {
   init(for width: CGFloat, narrowSize: CGFloat, spacing: CGFloat) {
     self.narrowSize = narrowSize
 
-    if width - spacing * 4.0 - narrowSize * 2.0 > 335.0 {
+    if width - spacing * 2.0 - narrowSize * 2.0 > 335.0 {
       count = .three
-    } else if width - spacing * 3.0 - narrowSize > 335.0 {
+    } else if width - spacing - narrowSize > 335.0 {
       count = .two
     } else {
       count = .one
@@ -43,15 +43,11 @@ struct ScreenLayout {
     var finalHorizontalSpacing = spacing
     switch count {
     case .three:
-      wideSize = width - spacing * 4.0 - narrowSize * 2.0
+      wideSize = width - spacing * 2.0 - narrowSize * 2.0
     case .two:
-      wideSize = width - spacing * 3.0 - narrowSize
+      wideSize = width - spacing - narrowSize
     case .one:
-      if width * 0.25 > spacing * 2.0 {
-        wideSize = width * 0.75
-      } else {
-        wideSize = width * 0.85
-      }
+      wideSize = width
       finalHorizontalSpacing = (width - wideSize) / 2.0
     }
 
@@ -85,7 +81,7 @@ struct ScreenLayout {
 
 let contents = (0..<10).map(String.init(describing:))
 
-let layoutSpacing: CGFloat = 52 // constant
+let layoutSpacing: CGFloat = 51 // constant
 let fixedHeight: CGFloat = 50
 
 struct TodayGrid: View {
@@ -109,9 +105,9 @@ struct TodayGrid: View {
     var yOffset: CGFloat = 0
     for _ in contents {
       guard let s = pattern.next() else { fatalError() }
-      xOffset += layout.spacing.horizontal
       pos.append((CGSize(width: xOffset, height: yOffset), s))
       xOffset += s
+      xOffset += layout.spacing.horizontal
 
       if xOffset >= maxTrailing {
         xOffset = 0
@@ -142,10 +138,20 @@ struct TodayGrid: View {
 struct TodayGrid_Previews: PreviewProvider {
   static var previews: some View {
     GeometryReader { geo in
-      TodayGrid(within: geo.size.width, contents: Array(repeating: "Placeholder", count: 6))
+      VStack(alignment: .leading) {
+        Group {
+          TodayGrid(within: geo.size.width, contents: Array(repeating: "Placeholder", count: 6))
+        }
+        .padding([.leading, .trailing], 5)
+        .border(Color.red)
+
+        Divider()
+
+        TodayGrid(within: geo.size.width, contents: Array(repeating: "Placeholder2", count: 6))
+          .border(Color.blue)
+      }
     }
-    .padding([.top])
-    .previewLayout()
+    .previewLayout(PreviewLayout.fixed(width: 1000, height: 768))
 
     GeometryReader { geo in
       TodayGrid(within: geo.size.width, contents: Array(repeating: "Placeholder", count: 6))
