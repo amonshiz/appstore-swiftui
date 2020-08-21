@@ -105,15 +105,12 @@ let layoutSpacing: CGFloat = 51 // constant
 let fixedHeight: CGFloat = 50
 
 struct TodayGrid: View {
-  let totalWidth: CGFloat
-  let totalHeight: CGFloat
   let positionSize: [(CGSize, CGFloat)]
   let contents: [GridContent]
 
   init(within width: CGFloat, contents: [GridContent]) {
     self.contents = contents
 
-    totalWidth = width
     let narrowSize: CGFloat = 335
     let layout = ScreenLayout(for: width, narrowSize: narrowSize, spacing: layoutSpacing)
     var pattern = layout.pattern()
@@ -136,22 +133,19 @@ struct TodayGrid: View {
     }
 
     positionSize = pos
-    totalHeight = yOffset - layout.spacing.vertical
   }
 
   var body: some View {
-    Color.clear.frame(width:totalWidth, height: totalHeight)
-      .overlay(
-        ZStack(alignment: .topLeading) {
-          ForEach(Array(positionSize.enumerated()), id: \.0) { (index, element) in
-            contents[index].content()
-              .frame(width: element.1, height: fixedHeight)
-              .border(Color.red)
-              .offset(element.0)
-              .id(index)
-          }
-        }, alignment: .topLeading
-      )
+    ZStack(alignment: .topLeading) {
+      ForEach(Array(positionSize.enumerated()), id: \.0) { (index, element) in
+        contents[index].content()
+          .frame(width: element.1, height: fixedHeight)
+          .border(Color.red)
+          .padding([.top], element.0.height)
+          .padding([.leading], element.0.width)
+          .id(index)
+      }
+    }
   }
 }
 
@@ -171,7 +165,7 @@ struct TodayGrid_Previews: PreviewProvider {
           .border(Color.blue)
       }
     }
-    .previewLayout(PreviewLayout.fixed(width: 1000, height: 768))
+    .previewLayout(PreviewLayout.fixed(width: 1366, height: 768))
 
     GeometryReader { geo in
       TodayGrid(within: geo.size.width, contents: Array(repeating: .promo, count: 6))
